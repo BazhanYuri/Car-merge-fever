@@ -29,21 +29,36 @@ public class InputManager : MonoBehaviour
 
     private void CheckSlide()
     {
+        Vector2 pos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            DetectLocation(pos);
+            _isCarDetected = Detect(pos);
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            if (_isCarDetected == false)
+            {
+                return;
+            }
+            if ((_tapPosition - pos).magnitude < 20)
+            {
+                CheckTapOnCar(pos);
+                return;
+            }
+            _touchCarCount = 0;
+            GetSide(_tapPosition - pos);
+        }
         if (Input.touchCount > 0)
         {
-
             Touch touch = Input.GetTouch(0);
-
 
             switch (touch.phase)
             {
                 case TouchPhase.Began:
-                    DetectLocation(touch);
-                    _isCarDetected = Detect(touch);
-                    break;
-                case TouchPhase.Moved:
-                    break;
-                case TouchPhase.Stationary:
+                    DetectLocation(touch.position);
+                    _isCarDetected = Detect(touch.position);
                     break;
                 case TouchPhase.Ended:
                     if (_isCarDetected == false)
@@ -52,13 +67,11 @@ public class InputManager : MonoBehaviour
                     }
                     if ((_tapPosition - touch.position).magnitude < 20)
                     {
-                        CheckTapOnCar(touch);
+                        CheckTapOnCar(touch.position);
                         return;
                     }
                     _touchCarCount = 0;
                     GetSide(_tapPosition - touch.position);
-                    break;
-                case TouchPhase.Canceled:
                     break;
                 default:
                     break;
@@ -69,10 +82,10 @@ public class InputManager : MonoBehaviour
 
 
     private Location _previous;
-    private bool DetectLocation(Touch touch)
+    private bool DetectLocation(Vector2 touchPos)
     {
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(touch.position);
+        Ray ray = Camera.main.ScreenPointToRay(touchPos);
         if (Physics.Raycast(ray, out hit))
         {
             if (hit.collider.TryGetComponent(out Location location))
@@ -101,10 +114,10 @@ public class InputManager : MonoBehaviour
 
         return false;
     }
-    private bool Detect(Touch touch)
+    private bool Detect(Vector2 touchPos)
     {
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(touch.position);
+        Ray ray = Camera.main.ScreenPointToRay(touchPos);
         if (Physics.Raycast(ray, out hit))
         {
             if (hit.collider.TryGetComponent(out ColliderTypeDetect collideType))
@@ -112,8 +125,8 @@ public class InputManager : MonoBehaviour
                 if (collideType.Type == GameObjectType.Car)
                 {
                     _slidedCar = collideType.Root.GetComponent<Car>();
-                    _tapPosition = touch.position;
-                    
+                    _tapPosition = touchPos;
+
                     return true;
                 }
             }
@@ -154,10 +167,10 @@ public class InputManager : MonoBehaviour
 
     private int _touchCarCount;
     private Car _touchedCar;
-    private void CheckTapOnCar(Touch touch)
+    private void CheckTapOnCar(Vector2 touchPos)
     {
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(touch.position);
+        Ray ray = Camera.main.ScreenPointToRay(touchPos);
         if (Physics.Raycast(ray, out hit))
         {
             if (hit.collider.TryGetComponent(out ColliderTypeDetect collideType))
@@ -173,7 +186,7 @@ public class InputManager : MonoBehaviour
                     {
                         return;
                     }
-                    
+
                     if (_touchedCar?.GetHashCode() == car.GetHashCode())
                     {
                         _touchCarCount++;
@@ -194,6 +207,6 @@ public class InputManager : MonoBehaviour
             }
         }
 
-        
+
     }
 }

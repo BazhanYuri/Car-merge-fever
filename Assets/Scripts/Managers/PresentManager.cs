@@ -34,7 +34,7 @@ public class PresentManager : MonoBehaviour
             }
             else if (_carManager.Cars.Count < 16)
             {
-                yield return new WaitForSeconds(3);
+                yield return new WaitForSeconds(7);
                 _carSpawner.SpawnPresent();
             }
 
