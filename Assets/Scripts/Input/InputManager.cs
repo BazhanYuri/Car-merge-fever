@@ -31,25 +31,6 @@ public class InputManager : MonoBehaviour
     {
         Vector2 pos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            DetectLocation(pos);
-            _isCarDetected = Detect(pos);
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            if (_isCarDetected == false)
-            {
-                return;
-            }
-            if ((_tapPosition - pos).magnitude < 20)
-            {
-                CheckTapOnCar(pos);
-                return;
-            }
-            _touchCarCount = 0;
-            GetSide(_tapPosition - pos);
-        }
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);

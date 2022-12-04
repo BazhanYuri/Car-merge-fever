@@ -1,0 +1,18 @@
+{
+    "name": "HomaGames.HomaBelly.Installer",
+    "rootNamespace": "",
+    "references": [
+        "GUID:12199b438ddf34858bf364613a06803b"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
