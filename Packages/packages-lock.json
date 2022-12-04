@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.homagames.debug-console": {
+      "version": "file:com.homagames.debug-console",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.textmeshpro": "1.0.0"
+      }
+    },
     "com.unity.cinemachine": {
       "version": "2.6.17",
       "depth": 0,

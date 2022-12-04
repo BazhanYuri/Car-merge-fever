@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 786f2cd1abfbf9b448d21a796aee6afe
+labels:
+- audio
+- graph
+- material
+- shader
+- spectrometer
+- spectrum
+timeCreated: 1513179885
+licenseType: Free
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

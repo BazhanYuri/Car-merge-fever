@@ -1,0 +1,31 @@
+{
+    "name": "HomaGames.HomaConsole",
+    "rootNamespace": "",
+    "references": [
+        "Unity.TextMeshPro",
+        "HomaGames.HomaConsole.Attributes",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "HOMA_DEVELOPMENT || UNITY_EDITOR"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "",
+            "define": "GRAPHY_NEW_INPUT"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "",
+            "define": "NEW_INPUT_SYSTEM_PACKAGE"
+        }
+    ],
+    "noEngineReferences": false
+}

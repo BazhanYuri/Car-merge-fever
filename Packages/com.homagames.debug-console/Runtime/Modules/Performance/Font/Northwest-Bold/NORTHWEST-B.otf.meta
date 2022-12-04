@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0a7eb8cd016c1314d9e3d2c206315226
+labels:
+- font
+timeCreated: 1516718196
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - NORTHWEST
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

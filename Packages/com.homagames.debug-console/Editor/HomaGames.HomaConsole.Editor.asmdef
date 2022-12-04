@@ -1,0 +1,19 @@
+{
+    "name": "HomaGames.HomaConsole.Editor",
+    "references": [
+        "GUID:02b2eb810be26234680174e94978f73f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "HOMA_DEVELOPMENT || UNITY_EDITOR"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

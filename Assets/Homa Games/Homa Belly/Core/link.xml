@@ -1,0 +1,11 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+	    <type fullname="HomaGames.HomaBelly.*" preserve="all" />
+	</assembly>
+	
+	<!-- Avoid IL2CPP stripping some C# libraries causing ArgumentOutOfRange Exceptions: https://forum.unity.com/threads/argumentoutofrangeexception-not-a-valid-calendar-for-the-given-culture-parameter-name-value.1111648/-->
+	<assembly fullname="mscorlib">
+		<namespace fullname="System.Globalization" preserve="all"/>
+	</assembly>
+	<assembly fullname="System.Globalization.*Calendar" preserve="all"/>
+</linker>

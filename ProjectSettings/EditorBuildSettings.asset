@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scenes/Homa Games
+      DataPrivacy Init Scene.unity
+    guid: ddc3b9c10a4004a75b7bbcd333a8ca31
+  - enabled: 0
+    path: Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scenes/Homa Games
+      DataPrivacy GDPR Scene.unity
+    guid: ecbe49342889c42d0bbdbf4978c49725
+  - enabled: 0
+    path: Assets/Homa Games/Homa Belly/Core/DataPrivacy/Runtime/Scenes/Homa Games
+      DataPrivacy IDFA Scene.unity
+    guid: 1b61406ff82214f1d92256a0809d2d8c
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

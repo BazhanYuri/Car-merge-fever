@@ -1,5 +1,6 @@
 using PathCreation;
 using UnityEngine;
+using HomaGames.HomaBelly;
 
 
 public class Bootstrap : MonoBehaviour

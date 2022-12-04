@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d33e243c2fbd5448a23698f87b8c600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForceDisableCustomDimensionIntegration: 0
+  LastManuallySet: 0
+  PreviousCustomDimension1:
+  - 001
+  - 002
+  - 003
+  - 004
+  - 005
+  - 006
+  - 007
+  - 008
+  - 009
+  - 010
+  - 011
+  - 012
+  - 013
+  - 014
+  - 015
+  - 016
+  - 017
+  - 018
+  - 019
+  - 020
+  PreviousCustomDimension2:
+  - Z
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - H
+  - I
+  - J
+  - K
+  - L
+  - M
+  - N
+  - O
+  - P
+  - Q
+  - R
+  - S
+  PreviousCustomDimension3:
+  - V1
+  - V2
+  - V3
+  - V4
+  - V5
+  - V6
+  - V7
+  - V8
+  - V9
+  - V10
+  - V11
+  - V12
+  - V13
+  - V14
+  - V15
+  - V16
+  - V17
+  - V18
+  - V19
+  - V20

@@ -1,0 +1,29 @@
+{
+  "name": "com.homagames.debug-console",
+  "displayName": "[Homa Games] Homa Console",
+  "version": "1.1.1",
+  "unity": "2018.4",
+  "keywords": [
+    "debug",
+    "runtime",
+    "console",
+    "tweak",
+    "hacks"
+  ],
+  "type": "tool",
+  "dependencies": {
+    "com.unity.textmeshpro": "1.0.0"
+  },
+  "author": {
+    "name": "Homa Games",
+    "url": "https://github.com/homagames/hg-mobile-unitypackage-debug-console.git"
+  },
+  "samples": [
+    {
+      "displayName": "Live Debug Samples",
+      "description": "Examples on how to use the Live Debug (properties).",
+      "path": "Samples~/Creatives"
+    }
+  ],
+  "description": "All-in-one debug tool for Unity games."
+}

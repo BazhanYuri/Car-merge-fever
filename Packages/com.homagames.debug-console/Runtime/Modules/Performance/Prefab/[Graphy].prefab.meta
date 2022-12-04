@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a1277cd0d26473e439ca06cf7f91b2d4
+labels:
+- audio
+- counter
+- debugger
+- fps
+- graph
+- graphy
+- memory
+- ram
+- screenshot
+- shader
+- spectrum
+- stats
+- tayx
+timeCreated: 1513271445
+licenseType: Free
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

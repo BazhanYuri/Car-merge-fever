@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b383373f33c91c14786e7ad749d977a6
+labels:
+- counter
+- graph
+- material
+- memory
+- monitor
+- ram
+- shader
+timeCreated: 1512501386
+licenseType: Free
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
