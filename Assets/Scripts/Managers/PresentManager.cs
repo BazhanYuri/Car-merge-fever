@@ -28,13 +28,13 @@ public class PresentManager : MonoBehaviour
             {
                 if (_moneyManager.MoneyCount < 10)
                 {
-                    yield return new WaitForSeconds(1);
+                    yield return new WaitForSeconds(221);
                     _carSpawner.SpawnPresent(); 
                 }
             }
             else if (_carManager.Cars.Count < 16)
             {
-                yield return new WaitForSeconds(7);
+                yield return new WaitForSeconds(2227);
                 _carSpawner.SpawnPresent();
             }
 
