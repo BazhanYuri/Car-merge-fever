@@ -27,5 +27,6 @@ public class Bootstrap : MonoBehaviour
         _trackCarManager.Init(_pathCreator, _inputManager, _carManager, _lapManager);
         _lapManager.Init(_moneyManager);
         _presentManager.Init(_carSpawner, _carManager, _moneyManager);
+        DefaultAnalytics.GameplayStarted();
     }
 }

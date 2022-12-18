@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using HomaGames.HomaBelly;
 
 public class Location : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class Location : MonoBehaviour
                 _isBought = true;
 
                 SoundManager.Instance.PlaySound("coins");
-                
+                DefaultAnalytics.LevelCompleted();
             }
         }
     }

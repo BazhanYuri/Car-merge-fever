@@ -12,5 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41c3c24eaa3304fd8b09d1906b08c22c, type: 3}
   m_Name: homa_data
   m_EditorClassIdentifier: 
-  configData: []
-  PluginManifestHash: 0
+  configData:
+  - pathHash: -1609317064
+    value: S87CIPY8
+  - pathHash: -876955219
+    value: 4f8dc4955feea13
+  - pathHash: -10439546
+    value: adjust_temp_app_id
+  - pathHash: 1158911540
+    value: ioj9z4u4we80
+  - pathHash: -1790251483
+    value: True
+  - pathHash: 1396189054
+    value: 574f4e16242a86e2bfb060be00b979a2
+  - pathHash: -1555731084
+    value: ae6906f3a3e4e3bfc20180b7e5906c692484912a
+  - pathHash: 1198286589
+    value: 677890640466799
+  PluginManifestHash: -1653424923
