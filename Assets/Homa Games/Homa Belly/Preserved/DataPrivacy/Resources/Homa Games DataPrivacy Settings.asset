@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6200543d61c6849b9a5c66c500cd1c5a, type: 3}
   m_Name: Homa Games DataPrivacy Settings
   m_EditorClassIdentifier: 
-  GameName: CarMergeFever
+  GameName: Carfever
   BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
   FontColor: {r: 0.2901961, g: 0.30980393, b: 0.34509805, a: 1}
   SecondaryFontColor: {r: 0.19215687, g: 0.8235294, b: 0.6431373, a: 1}
