@@ -32,21 +32,21 @@ MonoBehaviour:
   - ae6906f3a3e4e3bfc20180b7e5906c692484912a
   - 
   Build:
-  - 0.1
-  - 0.1
+  - 4
+  - 4
   SelectedPlatformOrganization:
-  - 
+  - KoalaGamesBazhan
   - 
   SelectedPlatformStudio:
-  - 
+  - YuraBazhan
   - 
   SelectedPlatformGame:
+  - CarMergeFever
   - 
-  - 
-  SelectedPlatformGameID: ffffffffffffffff
-  SelectedOrganization: 0000000000000000
-  SelectedStudio: 0000000000000000
-  SelectedGame: 0000000000000000
+  SelectedPlatformGameID: 26850300ffffffff
+  SelectedOrganization: 0100000000000000
+  SelectedStudio: 0100000000000000
+  SelectedGame: 0100000000000000
   NewVersion: 
   Changes: 
   SignUpOpen: 1
@@ -54,8 +54,8 @@ MonoBehaviour:
   GameName: 
   OrganizationName: 
   OrganizationIdentifier: 
-  EmailGA: 
-  IntroScreen: 1
+  EmailGA: yurabazhanhoma@gmail.com
+  IntroScreen: 0
   InfoLogEditor: 1
   InfoLogBuild: 1
   VerboseLogBuild: 0
@@ -127,21 +127,21 @@ MonoBehaviour:
   - V20
   ResourceItemTypes: []
   ResourceCurrencies: []
-  LastCreatedGamePlatform: 0
+  LastCreatedGamePlatform: -1
   Platforms: 0b00000008000000
-  CurrentInspectorState: 0
+  CurrentInspectorState: 1
   ClosedHints: 
   DisplayHints: 0
   DisplayHintsScrollState: {x: 0, y: 0}
-  Logo: {fileID: 0}
-  UpdateIcon: {fileID: 0}
-  InfoIcon: {fileID: 0}
-  DeleteIcon: {fileID: 0}
-  GameIcon: {fileID: 0}
-  HomeIcon: {fileID: 0}
-  InstrumentIcon: {fileID: 0}
-  QuestionIcon: {fileID: 0}
-  UserIcon: {fileID: 0}
+  Logo: {fileID: 2800000, guid: 98df8f9c5678a4e5d964caa1244e8958, type: 3}
+  UpdateIcon: {fileID: 2800000, guid: 810bbb19deed24f3cb7b854f9bafde26, type: 3}
+  InfoIcon: {fileID: 2800000, guid: 1b4dd779aadd54ac88856975af0d3c0a, type: 3}
+  DeleteIcon: {fileID: 2800000, guid: 85a626f1668244d30a4e9f616991a793, type: 3}
+  GameIcon: {fileID: 2800000, guid: a9ac7103fc40b4e00923bf8c2cb5d30f, type: 3}
+  HomeIcon: {fileID: 2800000, guid: fe7e2ecc9b2fe447bafe90f6395d4709, type: 3}
+  InstrumentIcon: {fileID: 2800000, guid: 2ba470b4dffd848c6b267c34770cc63e, type: 3}
+  QuestionIcon: {fileID: 2800000, guid: f8ea67e311b0c4b2ea05718e90fd3b5b, type: 3}
+  UserIcon: {fileID: 2800000, guid: f49ef75333ff247cfb5dad4dab0d4dac, type: 3}
   AmazonIcon: {fileID: 0}
   GooglePlayIcon: {fileID: 0}
   iosIcon: {fileID: 0}

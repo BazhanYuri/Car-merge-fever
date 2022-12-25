@@ -17,6 +17,18 @@ MonoBehaviour:
     value: S87CIPY8
   - pathHash: -876955219
     value: 4f8dc4955feea13
+  - pathHash: 1735753716
+    value: True
+  - pathHash: -255302860
+    value: False
+  - pathHash: -1958298337
+    value: False
+  - pathHash: 891139941
+    value: False
+  - pathHash: 2070089620
+    value: False
+  - pathHash: 647524154
+    value: 31
   - pathHash: -10439546
     value: adjust_temp_app_id
   - pathHash: 1158911540
@@ -29,4 +41,4 @@ MonoBehaviour:
     value: ae6906f3a3e4e3bfc20180b7e5906c692484912a
   - pathHash: 1198286589
     value: 677890640466799
-  PluginManifestHash: -1653424923
+  PluginManifestHash: 1002161281

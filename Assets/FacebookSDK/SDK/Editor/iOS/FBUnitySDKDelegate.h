@@ -16,10 +16,7 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import <AVFoundation/AVFoundation.h>
-#import <FBSDKShareKit/FBSDKShareKit-Swift.h>
-#import <FBSDKGamingServicesKit/FBSDKGamingServicesKit-Swift.h>
-#import <UnityFramework/UnityFramework-Swift.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
 
 extern NSString *const FBUnityMessageName_OnAppRequestsComplete;
 extern NSString *const FBUnityMessageName_OnFriendFinderComplete;
@@ -34,15 +31,6 @@ extern NSString *const FBUnityMessageName_OnFetchDeferredAppLinkComplete;
 extern NSString *const FBUnityMessageName_OnRefreshCurrentAccessTokenComplete;
 extern NSString *const FBUnityMessageName_OnUploadImageToMediaLibraryComplete;
 extern NSString *const FBUnityMessageName_OnUploadVideoToMediaLibraryComplete;
-extern NSString *const FBUnityMessageName_OnCreateGamingContextComplete;
-extern NSString *const FBUnityMessageName_OnSwitchGamingContextComplete;
-extern NSString *const FBUnityMessageName_OnChooseGamingContextComplete;
-extern NSString *const FBUnityMessageName_OnGetCurrentGamingContextComplete;
-extern NSString *const FBUnityMessageName_OnGetTournamentsComplete;
-extern NSString *const FBUnityMessageName_OnUpdateTournamentComplete;
-extern NSString *const FBUnityMessageName_OnTournamentDialogSuccess;
-extern NSString *const FBUnityMessageName_OnTournamentDialogCancel;
-extern NSString *const FBUnityMessageName_OnTournamentDialogError;
 
 /*!
  @abstract A helper class that implements various FBSDK delegates in order to send
@@ -50,9 +38,7 @@ extern NSString *const FBUnityMessageName_OnTournamentDialogError;
  */
 @interface FBUnitySDKDelegate : NSObject<
   FBSDKGameRequestDialogDelegate,
-  FBSDKSharingDelegate,
-  FBSDKContextDialogDelegate,
-  FBSDKShareTournamentDialogDelegate>
+  FBSDKSharingDelegate>
 
 /*
  @abstract returns a self retaining instance that is released once it receives a

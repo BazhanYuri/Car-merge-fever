@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Xml.Linq;
-using HomaGames.HomaBelly.Installer;
 using UnityEditor;
 using UnityEngine;
 
@@ -23,45 +22,12 @@ namespace HomaGames.HomaBelly
             }
 
             HomaBellyEditorLog.Debug($"Configuring {HomaBellyFacebookConstants.ID}");
-            ConfigureFacebookManifestConfig();
-            
-            // TODO: Using AddBuildPlayerHandlerFilter as this Facebook update will be released before Core v1.6.0
-            BuildPlayerHandlerWrapper.AddBuildPlayerHandlerFilter(ValidConfiguration);
-        }
-
-        /// <summary>
-        /// Check if Facebook Settings has the Facebook App ID and the Client Token properly set, otherwise
-        /// stop the build
-        /// </summary>
-        /// <param name="options"></param>
-        /// <returns>True if the configuration is valid, false otherwise</returns>
-        private static bool ValidConfiguration(BuildPlayerOptions options)
-        {
-            bool facebookAppIdSet = Facebook.Unity.Settings.FacebookSettings.AppIds?.Count > 0 && !string.IsNullOrWhiteSpace(Facebook.Unity.Settings.FacebookSettings.AppIds[0]);
-            bool facebookClientTokenSet = Facebook.Unity.Settings.FacebookSettings.ClientTokens?.Count > 0 && !string.IsNullOrWhiteSpace(Facebook.Unity.Settings.FacebookSettings.ClientTokens[0]);
-
-            if (!facebookAppIdSet)
-            {
-                Debug.LogError($"[FacebookPostprocessor] Facebook configuration missing Facebook App ID. Please check your configuration file or contact support: {HomaBellyFacebookConstants.FACEBOOK_ASSET_PATH_IN_RESOURCES}");
-                return false;
-            }
-            else if (!facebookClientTokenSet)
-            {
-                Debug.LogError($"[FacebookPostprocessor] Starting with Facebook v13, Facebook Client Token is mandatory. Please check your configuration file or contact support: {HomaBellyFacebookConstants.FACEBOOK_ASSET_PATH_IN_RESOURCES}");
-                return false;
-            }
-
-            return true;
-        }
-
-        private static void ConfigureFacebookManifestConfig()
-        {
             PluginManifest pluginManifest = PluginManifest.LoadFromLocalFile();
 
             if (pluginManifest != null)
             {
                 PackageComponent packageComponent = pluginManifest.Packages
-                    .GetPackageComponent(HomaBellyFacebookConstants.ID, EditorPackageType.ANALYTICS_SYSTEM);
+                    .GetPackageComponent(HomaBellyFacebookConstants.ID, HomaBellyFacebookConstants.TYPE);
                 if (packageComponent != null)
                 {
                     Dictionary<string, string> configurationData = packageComponent.Data;
@@ -72,27 +38,8 @@ namespace HomaGames.HomaBelly
                         CreateSettingsIfNeeded();
 
                         // Configure app ID
-                        if (configurationData.ContainsKey("s_app_id"))
-                        {
-                            Facebook.Unity.Settings.FacebookSettings.AppIds[0] = configurationData["s_app_id"];
-                            Facebook.Unity.Settings.FacebookSettings.AppLabels[0] = Application.productName;
-                        }
-                        else
-                        {
-                            Debug.LogError("The Facebook app ID has not been set in your Homa Belly manifest. " +
-                                           "Please update the app ID field of your manifest and refresh Homa Belly.");
-                        }
-                        
-                        // Configure Client Token
-                        if (configurationData.ContainsKey("s_client_token"))
-                        {
-                            Facebook.Unity.Settings.FacebookSettings.ClientTokens[0] = configurationData["s_client_token"];
-                        }
-                        else
-                        {
-                            Debug.LogError("The Facebook Client Token has not been set in your Homa Belly manifest. " +
-                                           "Please update the Client Token field of your manifest and refresh Homa Belly.");
-                        }
+                        Facebook.Unity.Settings.FacebookSettings.AppIds[0] = configurationData["s_app_id"];
+                        Facebook.Unity.Settings.FacebookSettings.AppLabels[0] = Application.productName;
                         
                         // Determine if FB should send base events or no
                         if (configurationData.ContainsKey("b_auto_log_app_events_enabled"))
@@ -133,7 +80,7 @@ namespace HomaGames.HomaBelly
                         if (!EditorApplication.isPlaying)
                         {
                             EditorUtility.SetDirty(Facebook.Unity.Settings.FacebookSettings.Instance);
-                            EditorApplication.delayCall += AssetDatabase.SaveAssets;
+                            AssetDatabase.SaveAssets();
                         }
                         
                         // Always try to remove `android:debuggable` attribute
